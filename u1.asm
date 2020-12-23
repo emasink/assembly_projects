@@ -65,9 +65,6 @@ pirmas_simbolis:
         jmp antras_simbolis
     skaicius:
       add al, 30h
-      ;mov ah, 02H   ; pirmas simbolis
-      ;mov dl, al    ;
-      ;int 21H       ;
       mov [output + di], al
       inc di
 antras_simbolis:
@@ -76,11 +73,6 @@ antras_simbolis:
       cmp al, 10
     jb skaicius2
       add al, 37h   ;jeigu raide
-      ;mov ah, 02H
-      ;mov dl, al
-      ;int 21h
-      ;mov dl, ' '
-      ;int 21h
       mov [output + di], al
       inc di
       mov dl, 32
@@ -89,11 +81,6 @@ antras_simbolis:
       jmp pabaiga
     skaicius2:       ;jeigu skaitmuo
       add al, 30h
-      ;mov dl, al
-      ;mov ah, 02h
-      ;int 21H
-      ;mov dl, ' '
-      ;int 21h
       mov [output + di], al
       inc di
       mov dl, 32
